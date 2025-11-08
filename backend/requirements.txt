@@ -1,5 +1,6 @@
-Flask
+flask
+flask-cors
 pandas
+matplotlib
 openpyxl
-google-genai
-python-dotenv
+google-generativeai

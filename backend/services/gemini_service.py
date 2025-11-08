@@ -1,21 +1,19 @@
-import os
+import os 
 from google import genai
 from dotenv import load_dotenv
 
-# Load .env
 load_dotenv()
 
-# Get API key from environment
 api_key = os.getenv("GEMINI_API_KEY")
 
-# Make sure API key exists
 if not api_key:
-    raise ValueError("GEMINI_API_KEY not found in environment variables")
+    raise ValueError("The API KEY IS NOT FOUND PLEASE TRY AGAIN!")
 
-# Pass api_key directly to Client
+# Creates a gemini client object
+# Client the one make that sends/receives requests
 client = genai.Client(api_key=api_key)
 
-def ask_gemini(prompt: str, model="gemini-2.5-flash") -> str:
+def ask_gemini(prompt: str, model="gemini-2.5-flash"):
     """
     Send a prompt to Gemini and return the text response.
     """

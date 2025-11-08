@@ -1,16 +1,22 @@
 from flask import Flask, send_from_directory
-from routes.excel_routes import excel_bp
+from routes.ask_ai import askAI_bp
+from routes.formula import excel_bp
+from routes.graph import graph_bp
+from routes.upload import upload_bp
 import os
 from flask_cors import CORS
 
 UPLOAD_FOLDER = "uploads"
 
-# Create Flask app first
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])  # allow React frontend
+CORS(app)
 
-# Register blueprint
+print("Running")
+
+app.register_blueprint(askAI_bp, url_prefix="/api")
 app.register_blueprint(excel_bp, url_prefix="/api")
+app.register_blueprint(upload_bp, url_prefix="/api")
+app.register_blueprint(graph_bp , url_prefix="/api")
 
 # Route to serve uploaded files
 @app.route("/uploads/<filename>")
