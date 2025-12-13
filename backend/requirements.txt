@@ -5,3 +5,5 @@ matplotlib
 openpyxl
 google-generativeai
 gunicorn
+google-genai
+
