@@ -7,15 +7,11 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md border-b border-gray-100 rounded-xl">
+    <nav className="bg-white shadow-lg border border-gray-300 rounded-xl">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <a href="/" className="flex items-center gap-2 transition-opacity">
-            <div className="w-12 h-12">
-              <img src={Logo} alt="" />
-            </div>
-            <span className="text-2xl font-bold text-gray-900">ExcelGPT</span>
+            <span className="text-2xl font-bold text-green-600">ExcelGPT</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -23,7 +19,7 @@ export const Navbar = () => {
             {/* <a href="#" className="text-gray-700 font-medium hover:text-green-500 transition-colors instrument-sans-main">Features</a>
             <a href="#" className="text-gray-700 font-medium hover:text-green-500 transition-colors instrument-sans-main">Pricing</a>
             <a href="#" className="text-gray-700 font-medium hover:text-green-500 transition-colors instrument-sans-main">Docs</a> */}
-            
+
             <button className="flex items-center gap-2 bg-gradient-to-br from-green-500 to-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md">
               <HelpCircle size={18} />
               Help
@@ -31,7 +27,7 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button 
+          <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-700 hover:text-green-500 transition-colors"
           >
@@ -45,11 +41,11 @@ export const Navbar = () => {
             {/* <a href="#" className="text-gray-700 font-medium hover:text-green-500 transition-colors">Features</a>
             <a href="#" className="text-gray-700 font-medium hover:text-green-500 transition-colors">Pricing</a>
             <a href="#" className="text-gray-700 font-medium hover:text-green-500 transition-colors">Docs</a> */}
-            
-            <button className="flex items-center justify-center gap-2 bg-gradient-to-br from-green-500 to-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors w-full">
+
+            {/* <button className="flex items-center justify-center gap-2 bg-gradient-to-br from-green-500 to-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors w-full">
               <HelpCircle size={18} />
               Help
-            </button>
+            </button> */}
           </div>
         )}
       </div>
