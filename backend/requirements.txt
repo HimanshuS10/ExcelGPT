@@ -6,4 +6,4 @@ openpyxl
 google-generativeai
 gunicorn
 google-genai
-
+python-dotenv
