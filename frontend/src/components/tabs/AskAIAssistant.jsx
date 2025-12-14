@@ -45,7 +45,7 @@ const AskAIAssistant = ({ fileName }) => {
         try {
             const payload = { filename: fileName, question: userMessage };
 
-            const response = await fetch('http://127.0.0.1:5170/api/ask_ai', {
+            const response = await fetch('https://excelgpt.onrender.com/api/ask_ai', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),

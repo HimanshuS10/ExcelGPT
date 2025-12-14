@@ -56,7 +56,7 @@ export default function FileUploader({ onUploadSuccess }) {
 
         try {
 
-            const res = await fetch('http://127.0.0.1:5170/api/upload', {
+            const res = await fetch('https://excelgpt.onrender.com/api/upload', {
                 method: 'POST',
                 body: formData,
             });
