@@ -3,9 +3,9 @@
 Turn spreadsheets into insights with AI. <br />
 Website Link: https://excelgpt.vercel.app/
 
+![ExcelGPT Preview](assets/preview3.png)
 ![ExcelGPT Preview](assets/preview1.png)
 ![ExcelGPT Preview](assets/preview2.png)
-![ExcelGPT Preview](assets/preview3.png)
 
 # Tech Stack:
 
@@ -36,6 +36,7 @@ Website Link: https://excelgpt.vercel.app/
 `venv\Scripts\activate` (Windows)  `source venv/bin/activate` (Mac) <br />
 `pip install -r requirements.txt` <br />
 `python app.py`
+
 
 
 
