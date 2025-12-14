@@ -1,4 +1,15 @@
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../src/assets/font/PressStart2P-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+
 @import "tailwindcss";
+
+@theme {
+  --font-press: "Press Start 2P", system-ui;
+}
 
 .instrument-sans-main {
   font-family: "Instrument Sans", sans-serif;

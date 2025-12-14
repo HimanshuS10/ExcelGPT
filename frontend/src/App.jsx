@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import Navbar from "./components/Navbar"
-import Uploader from "./components/Uploader";
+import { useState, useEffect } from "react";
+import Dashboard from "./components/Dashboard";
 import MainTab from "./components/MainTab";
 
 function App() {
@@ -9,6 +7,7 @@ function App() {
   const [showTalkAI, setShowTalkAI] = useState(false);
   const [uploadedFile, setUploadedFile] = useState(null);
 
+  // Trigger MainTab view 2s after success
   useEffect(() => {
     if (uploadSuccess) {
       const timer = setTimeout(() => {
@@ -30,30 +29,12 @@ function App() {
   };
 
   return (
-
-
-    <div className="min-h-screen w-full relative bg-white">
-      {/* Ocean Abyss Background with Top Glow */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `
-        radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #10b981 100%)
-      `,
-          backgroundSize: "100% 100%",
-        }}
-      />
-
-
-      {/* Content Layer */}
-      <div className="relative z-10 p-6">
-        <Navbar />
-        {showTalkAI ? (
-          <MainTab fileName={uploadedFile?.filename} onDelete={handleDeleteFile} />
-        ) : (
-          <Uploader onUploadSuccess={handleUploadSuccess} />
-        )}
-      </div>
+    <div className="min-h-screen w-full">
+      {showTalkAI ? (
+        <MainTab fileName={uploadedFile?.filename} onDelete={handleDeleteFile} />
+      ) : (
+        <Dashboard onUploadSuccess={handleUploadSuccess} />
+      )}
     </div>
   );
 }
